@@ -14,8 +14,7 @@ The color of the session context usage bar tells you when it's worth starting fr
 
 - **`jq`** — required (parses the JSON Claude Code feeds the status line).
 - **`git`** — optional; without it the repo/branch portion is blank.
-- **Claude Code v2.1.153+** recommended — provides an accurate `$COLUMNS` so the
-  right-aligned content doesn't get truncated.
+- **Claude Code v2.1.153+** recommended: provides an accurate `$COLUMNS` so the right-aligned content doesn't get truncated.
 
 ## Install
 
@@ -58,7 +57,7 @@ You can tell Claude Code (or another coding agent) to do this for you:
 1. Fetch/clone the linked location and locate `statusline-command.sh`.
 2. Run `./install.sh` if present. Otherwise do the manual steps:
 - `mkdir -p ~/.claude && cp statusline-command.sh ~/.claude/ && chmod +x ~/.claude/statusline-command.sh`
-- Merge the `statusLine` key (shown above) into `~/.claude/settings.json` using the **absolute** path to the copied script. **Read the existing file and merge — never overwrite it**, so other settings are preserved.
+- Merge the `statusLine` key (shown above) into `~/.claude/settings.json` using the **absolute** path to the copied script. **Read the existing file and merge, never overwrite it**, so other settings are preserved.
 3. Confirm `jq` is installed; warn the user if not.
 4. Tell the user to start a new session or run `/statusline`.
 
